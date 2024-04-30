@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #00a8cc;
+  transition: all 0.2s ease-in-out;
+
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+body {
+  background-color: #0b162d;
+}
+
+button {
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  margin: 1rem;
+  background-color: #142850;
+  border: hidden;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #3c546e;
+}
+
+.button {
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  margin: 1rem;
+  background-color: #27496d;
+  border: hidden;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #3c546e;
+}
+
+.closeButton {
+  background-color: rgb(131, 0, 0);
+  color: rgb(187, 187, 187);
+  font-weight: bolder;
+}
+
+.closeButton:hover {
+  background-color: rgb(142, 26, 26);
+  color: whitesmoke;
+}
+
+.budgetPopupNotDisplayed {
+  display: none;
+}
+
+.budgetPopupDisplayed {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popupContainer {
+  text-align: center;
+  background-color: #0b162d;
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: rgb(171, 232, 244);
+  width: 20%;
+  height: auto;
+  font-size: 1.2rem;
+}
+
+.popupContainer p {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-block: 1rem;
+}
+
+.budgetFundForm2 {
+  display: none;
+}
+
+.budgetFundForm1 p {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"] {
+  background-color: #27496d;
+  border: hidden;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border: hidden;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
