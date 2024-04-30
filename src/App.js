@@ -1,14 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import BudgetFund from './components/BudgetFund/BudgetFund';
 
 function App() {
+
   return (
     <div className="App">
-      Poseidon Bank
+      <header className="header">
+        Poseidon Bank
+      </header>
       <BudgetFund></BudgetFund>
     </div>
   );
 }
 
-export default App;
+export default App
