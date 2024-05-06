@@ -10,15 +10,15 @@
   font-style: normal;
 }
 
-body {
+/* body {
   background-color: #0b162d;
-}
+} */
 
 button {
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
   margin: 1rem;
-  background-color: #142850;
+  background-color: #040e1d;
   border: hidden;
   border-radius: 0.5rem;
   font-size: 1.1rem;
@@ -27,29 +27,31 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #3c546e;
+  background-color: #0d1c3b;
 }
 
 .button {
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
   margin: 1rem;
-  background-color: #27496d;
+  background-color: #040e1d;
   border: hidden;
   border-radius: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bolder;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: #3c546e;
+  background-color: #0d1c3b;
 }
 
 .closeButton {
   background-color: rgb(131, 0, 0);
   color: rgb(187, 187, 187);
   font-weight: bolder;
+  width: 90%;
+  margin-top: 0.5rem;
 }
 
 .closeButton:hover {
@@ -64,7 +66,7 @@ button:hover {
 .budgetPopupDisplayed {
   display: flex;
   position: absolute;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   top: 0;
   height: 100%;
@@ -76,31 +78,68 @@ button:hover {
   text-align: center;
   background-color: #0b162d;
   z-index: 100;
-  padding: 1rem;
-  border-radius: 1rem;
   color: rgb(171, 232, 244);
-  width: 20%;
-  height: auto;
+  width: 25rem;
+  max-width: 25rem;
+  height: 100%;
   font-size: 1.2rem;
 }
 
 .popupContainer p {
   font-size: 1.3rem;
   font-weight: bolder;
-  margin-block: 1rem;
+  margin-block: 0.5rem;
+  margin-inline: 0.5rem;
+  background-color: #040e1d;
+  padding: 0.5rem;
 }
 
-.budgetFundForm2 {
+.popupContainer h2 {
+  background-color: #27496d;
+  padding: 0.5rem;
+  color: rgb(183, 183, 183);
+  margin-bottom: 1rem;
+}
+
+.popupContainer h4 {
+  margin-block: 0.5rem;
+}
+
+.popupContainer label {
+  padding-inline: 0.5rem;
+}
+
+.budgetFundForm1 {
+  text-align: center;
+}
+
+.displayNone {
   display: none;
 }
 
-.budgetFundForm1 p {
-  text-align: center;
+.budgetFundForm2 {
+  display: block;
+}
+
+.budgetFundForm2 p {
+  font-size: 1rem;
+}
+
+.green {
+  color: rgb(85, 242, 85);
+}
+
+.red {
+  color: rgb(244, 87, 87);
+}
+
+.whitesmoke {
+  color: rgb(201, 201, 201);
 }
 
 input[type="text"],
 input[type="number"] {
-  background-color: #27496d;
+  background-color: #040e1d;
   border: hidden;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -113,4 +152,36 @@ input[type="number"]:focus {
   border: hidden;
   padding: 0.5rem;
   font-size: 1.1rem;
+}
+
+.spaceEvenly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  background-color: #040e1d;
+  padding: 0.3rem;
+  margin-inline: 0.5rem;
+  width: 50%;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+table td {
+  padding: 0;
+}
+
+.deleteItemButton {
+  padding: 0;
+  margin-inline: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.deleteItemButton i {
+  color: rgb(224, 83, 83);
 }
