@@ -86,7 +86,7 @@ export default function BudgetFund() {
 
   return (
     <div>
-      <button onClick={displayPopup}>Budget Funds</button>
+      <button className="budgetfund-btn" onClick={displayPopup}>Budget Funds</button>
       <div className={display}>
         <div className="popupContainer">
           <h2>Budget List</h2>

@@ -1,0 +1,31 @@
+/* Dashboard.css */
+h2 {
+    margin: 10px;
+}
+
+.dashboard {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+  
+.dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.dashboard th {
+    border: 1px solid #040e1d;
+    padding: 8px;
+    text-align: center;
+    background-color: #27496D;
+} 
+.dashboard td {
+    border: 1px solid #040e1d;
+    padding: 8px;
+    text-align: center;
+}
+  
+th {
+    background-color: #f2f2f2;
+}
+  

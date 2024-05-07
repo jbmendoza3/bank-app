@@ -1,0 +1,53 @@
+
+.sendmoney-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #27496D;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+  
+.sendmoney-popup h2 {
+  margin-bottom: 20px;
+}
+  
+.sendmoney-popup form {
+  display: flex;
+  flex-direction: column;
+}
+  
+.sendmoney-popup label {
+  margin-bottom: 8px;
+}
+  
+.sendmoney-popup select,
+.sendmoney-popup input[type="number"] {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid#ccc;
+  border-radius: 4px;
+}
+  
+.sendmoney-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+  
+.sendmoney-popup button:hover {
+  background-color: #0056b3;
+}
+
+.sendmoneybtn {
+  background-color: #007bff;
+}
+
+.close-btn {
+  background-color: #dc3545;
+}

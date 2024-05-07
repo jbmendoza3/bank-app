@@ -1,0 +1,55 @@
+
+
+.withdraw-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #27496D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.withdraw-popup h2 {
+    margin-bottom: 20px;
+}
+  
+.withdraw-popup form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.withdraw-popup label {
+    margin-bottom: 10px;
+}
+  
+.withdraw-popup input {
+    border-radius: 4px;
+}
+  
+.withdraw-popup button {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.withdraw-popup button:hover {
+    background-color: #0056b3;
+}
+
+select {
+    padding: 10px;
+    background-color: #0b162d;
+    
+}
+
+.withdrawbtn {
+    background-color: #007bff;
+}
+
+.cancelbtn {
+    background-color: #dc3545;
+}

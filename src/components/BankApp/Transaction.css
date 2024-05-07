@@ -1,0 +1,48 @@
+
+
+.transaction-history {
+ margin: 20px;
+}
+  
+.transaction-history h2 {
+ font-size: 1.2rem;
+ margin-bottom: 10px;
+    
+}
+  
+.transaction-history table {
+ width: 100%;
+ border-collapse: collapse;
+    
+}
+  
+.transaction-history th,
+.transaction-history td {
+ padding: 8px 12px;
+ text-align: center;
+ border: 1px solid black;
+}
+
+  
+.transaction-history th {
+ background-color: #27496D;
+}
+  
+.transaction-history tr {
+ border-bottom: 1px solid #dee2e6;
+}
+  
+.transaction-history tr:last-child {
+ border-bottom: none;
+}
+  
+.transaction-history tr.deposit {
+ background-color: #114232;
+ color: white;
+}
+  
+.transaction-history tr.send {
+ background-color: #461111;
+ color: white !important;
+}
+  

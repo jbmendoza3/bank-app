@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
-import BudgetFund from './components/BudgetFund/BudgetFund';
+import BankApp from './components/BankApp/BankApp';
+
+
 
 function App() {
+
 
   return (
     <div className="App">
       <header className="header">
         Poseidon Bank
       </header>
-      <BudgetFund></BudgetFund>
+      <BankApp></BankApp>
+      
     </div>
   );
 }

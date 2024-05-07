@@ -173,7 +173,7 @@ table {
 }
 
 table td {
-  padding: 0;
+  padding: 5px;
 }
 
 .deleteItemButton {
@@ -184,4 +184,10 @@ table td {
 
 .deleteItemButton i {
   color: rgb(224, 83, 83);
+}
+
+
+.budgetfund-btn {
+  padding-inline: 8rem;
+  font-size: 20px;
 }

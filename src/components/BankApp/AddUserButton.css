@@ -1,0 +1,65 @@
+/* AddUserPopup.css */
+
+.add-user-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #142850;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  
+}
+
+.adduser-popup-content {
+  text-align: center;
+}
+
+.adduser-popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.adduser-popup-content input {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  background-color: #040e1d;
+  border: hidden;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.adduser-popup-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.adduser-popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.adduser-btn {
+  background-color: #007bff;
+}
+
+.close-btnx {
+  background-color: #dc3545;
+}
