@@ -26,8 +26,8 @@ const AddUserPopup = ({ onAddUser, onClose }) => {
     }
 
     // Validate balance
-    if (isNaN(parseFloat(balance)) || parseFloat(balance) < 0) {
-      setError('Balance must be a non-negative number');
+    if (isNaN(parseFloat(balance)) || parseFloat(balance) <= 99) {
+      setError('A balance of at least 100 is required.');
       return;
     }
 

@@ -10,7 +10,7 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (sender && recipient && amount) {
+    if (sender && recipient && amount >0) {
       const senderUser = users.find(user => user.name === sender);
       if (senderUser.balance < parseFloat(amount)) {
         setError('Insufficient balance');
@@ -18,6 +18,8 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
         sendMoney(sender, recipient, parseFloat(amount));
         toggleSendMoneyPopup();
       }
+    } else {
+      setError('Transaction invalid!');
     }
   };
 
