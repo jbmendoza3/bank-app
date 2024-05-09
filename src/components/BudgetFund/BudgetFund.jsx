@@ -84,9 +84,17 @@ export default function BudgetFund() {
     });
   };
 
+  const handleEditFunds = () => {
+    setForm1ClassName("budgetFundForm1");
+    setForm2ClassName("displayNone");
+    setListItems([]);
+  };
+
   return (
     <div>
-      <button className="budgetfund-btn" onClick={displayPopup}>Budget Funds</button>
+      <button className="budgetfund-btn" onClick={displayPopup}>
+        Budget Funds
+      </button>
       <div className={display}>
         <div className="popupContainer">
           <h2>Budget List</h2>
@@ -112,7 +120,13 @@ export default function BudgetFund() {
             <form onSubmit={handleSubmitForm2}>
               <h6>Total Funds</h6>
               <h3>
-                PHP <span className="whitesmoke">{totalFunds}</span>
+                PHP{" "}
+                <span className="whitesmoke">
+                  {totalFunds}
+                  <button className="editButton" onClick={handleEditFunds}>
+                    <i className="fa-solid fa-pen-to-square"></i>
+                  </button>
+                </span>
               </h3>
               <span className="spaceEvenly">
                 <label>Label: </label>
