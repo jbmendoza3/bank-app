@@ -3,9 +3,8 @@ import "./BudgetFund.css";
 import { useState } from "react";
 
 export default function BudgetFund() {
-  const [display, setDisplay] = useState("budgetPopupNotDisplayed");
+  const [display, setDisplay] = useState(false);
   const [remainingFundsDisplay, setRemainingFundsDisplay] = useState("green");
-  const [okspoks, setOkspoks] = useState(true);
 
   const [form1ClassName, setForm1ClassName] = useState("budgetFundForm1");
   const [form2ClassName, setForm2ClassName] = useState("displayNone");
@@ -33,16 +32,7 @@ export default function BudgetFund() {
   };
 
   function displayPopup() {
-    let className = "";
-    console.log(okspoks);
-    if (okspoks) {
-      setOkspoks(false);
-      className = "budgetPopupDisplayed";
-    } else {
-      setOkspoks(true);
-      className = "budgetPopupNotDisplayed";
-    }
-    setDisplay(className);
+    setDisplay(!display);
   }
 
   const handleSubmitForm1 = (event) => {
@@ -95,7 +85,7 @@ export default function BudgetFund() {
       <button className="budgetfund-btn" onClick={displayPopup}>
         Budget Funds
       </button>
-      <div className={display}>
+      <div className={display ? "budgetPopupDisplayed" : "budgetPopupNotDisplayed"}>
         <div className="popupContainer">
           <h2>Budget List</h2>
           <button className="closeButton" onClick={displayPopup}>

@@ -10,9 +10,7 @@
   font-style: normal;
 }
 
-/* body {
-  background-color: #0b162d;
-} */
+
 
 button {
   padding-inline: 1.5rem;
@@ -63,6 +61,14 @@ button:hover {
   display: none;
 }
 
+.opacity1{
+  opacity: 1;
+}
+
+.opacity0{
+  opacity: 0;
+}
+
 .budgetPopupDisplayed {
   display: flex;
   position: absolute;
@@ -84,6 +90,7 @@ button:hover {
   height: 100%;
   font-size: 1.2rem;
 }
+
 
 .popupContainer p {
   font-size: 1.3rem;
