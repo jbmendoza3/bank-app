@@ -14,7 +14,12 @@
 .sendmoney-popup h2 {
   margin-bottom: 20px;
 }
-  
+
+.error-message {
+  color: red;
+  margin-bottom: 2px;
+}
+
 .sendmoney-popup form {
   display: flex;
   flex-direction: column;
