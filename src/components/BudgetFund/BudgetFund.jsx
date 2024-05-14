@@ -63,10 +63,13 @@ export default function BudgetFund() {
   };
 
   const handleDeleteItem = (index, allocatedFunds) => {
+    // delete from list
     const updatedListItems = [...listItems];
     updatedListItems.splice(index, 1);
     setListItems(updatedListItems);
+    
 
+    // return fund value to remaining funds
     setRemainingFunds((prevRemainingFunds) => {
       const newRemainingFunds = prevRemainingFunds + Number(allocatedFunds);
       setRemainingFundsDisplay(newRemainingFunds < 0 ? "red" : "green");
