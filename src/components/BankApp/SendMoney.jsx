@@ -10,7 +10,7 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (sender && recipient && amount >0) {
+    if (sender && recipient && amount > 0) {
       const senderUser = users.find(user => user.name === sender);
       if (senderUser.balance < parseFloat(amount)) {
         setError('Insufficient balance');
@@ -26,15 +26,10 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
   return (
     <div className="sendmoney-popup">
       <h2>Send Money</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
         <label htmlFor="sender">Sender:</label>
-        <select
-          id="sender"
-          value={sender}
-          onChange={(e) => setSender(e.target.value)}
-          required
-        >
+        <select id="sender" value={sender} onChange={(e) => setSender(e.target.value)} required>
           <option value="">Select Sender</option>
           {users.map((user, index) => (
             <option key={index} value={user.name}>
@@ -43,12 +38,7 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
           ))}
         </select>
         <label htmlFor="recipient">Recipient:</label>
-        <select
-          id="recipient"
-          value={recipient}
-          onChange={(e) => setRecipient(e.target.value)}
-          required
-        >
+        <select id="recipient" value={recipient} onChange={(e) => setRecipient(e.target.value)} required>
           <option value="">Select Recipient</option>
           {users.map((user, index) => (
             <option key={index} value={user.name}>
@@ -57,13 +47,7 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
           ))}
         </select>
         <label htmlFor="amount">Amount:</label>
-        <input
-          type="number"
-          id="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          required
-        />
+        <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} required></input>
         <button className="sendmoneybtn" type="submit">Send</button>
         <button className="close-btn" onClick={toggleSendMoneyPopup}>Close</button>
       </form>

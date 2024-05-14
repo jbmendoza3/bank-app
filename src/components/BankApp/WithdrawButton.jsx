@@ -9,12 +9,10 @@ const WithdrawButton = ({ users, onWithdraw, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (selectedUser && amount > 0) {
+    if (selectedUser && amount) {
       onWithdraw(selectedUser, parseFloat(amount));
       setSelectedUser('');
       setAmount('');
-    } else {
-      alert("Please select a user and enter a valid amount to withdraw.");
     }
     handleClose();
   };
@@ -40,13 +38,7 @@ const WithdrawButton = ({ users, onWithdraw, onClose }) => {
           ))}
         </select>
         <label htmlFor="amount">Amount:</label>
-        <input
-          type="number"
-          id="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          required
-        />
+        <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} required></input>
         <button className="withdrawbtn" type="submit">Withdraw</button>
         <button className="cancelbtn" type="button" onClick={handleCancel}>Cancel</button>
       </form>
