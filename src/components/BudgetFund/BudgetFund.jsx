@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BudgetFund.css";
-import { useState } from "react";
 
 export default function BudgetFund() {
   const [display, setDisplay] = useState(false);
@@ -9,16 +8,21 @@ export default function BudgetFund() {
   const [form1ClassName, setForm1ClassName] = useState("budgetFundForm1");
   const [form2ClassName, setForm2ClassName] = useState("displayNone");
 
-  const [totalFunds, setTotalFunds] = useState();
+  const [totalFunds, setTotalFunds] = useState("");
   const [itemNameInput, setItemNameInput] = useState("");
   const [itemAllocatedFunds, setItemAllocatedFunds] = useState("");
   const [listItems, setListItems] = useState([]);
-  const [remainingFunds, setRemainingFunds] = useState();
+  const [remainingFunds, setRemainingFunds] = useState("");
 
-  // Beer
-  // PHP 10
+  const handleKeyDown = (event) => {
+    if (event.key === 'e' || event.key === 'E') {
+      event.preventDefault();
+    }
+  };
 
   const handleTotalFundsInput = (event) => {
+    // let { value } = event.target;
+    // value = value.replace(/e|E/g, '');
     setTotalFunds(event.target.value);
     setRemainingFunds(event.target.value);
   };
@@ -28,7 +32,9 @@ export default function BudgetFund() {
   };
 
   const handleItemAllocatedFunds = (event) => {
-    setItemAllocatedFunds(event.target.value);
+    let { value } = event.target;
+    value = value.replace(/e|E/g, '');
+    setItemAllocatedFunds(value);
   };
 
   function displayPopup() {
@@ -43,6 +49,7 @@ export default function BudgetFund() {
     } else {
       alert("Please input a Positive Value.");
     }
+    setRemainingFundsDisplay("green");
   };
 
   const handleSubmitForm2 = (event) => {
@@ -63,13 +70,10 @@ export default function BudgetFund() {
   };
 
   const handleDeleteItem = (index, allocatedFunds) => {
-    // delete from list
     const updatedListItems = [...listItems];
     updatedListItems.splice(index, 1);
     setListItems(updatedListItems);
-    
 
-    // return fund value to remaining funds
     setRemainingFunds((prevRemainingFunds) => {
       const newRemainingFunds = prevRemainingFunds + Number(allocatedFunds);
       setRemainingFundsDisplay(newRemainingFunds < 0 ? "red" : "green");
@@ -101,7 +105,9 @@ export default function BudgetFund() {
               <input
                 type="number"
                 name="funds"
+                value={totalFunds}
                 onChange={handleTotalFundsInput}
+                onKeyDown={handleKeyDown}
                 required
               />
               <br />
@@ -138,6 +144,7 @@ export default function BudgetFund() {
                   name=""
                   value={itemAllocatedFunds}
                   onChange={handleItemAllocatedFunds}
+                  onKeyDown={handleKeyDown}
                   required
                 />
               </span>
