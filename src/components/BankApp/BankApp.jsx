@@ -27,6 +27,7 @@ function BankApp() {
       alert("Deposited money cannot be negative or zero");
       return;
     }
+
     // Function to deposit money into a user's account, updating the balance
     const updatedUsers = users.map(user => {
      if (user.name === selectedUser) {
@@ -73,6 +74,11 @@ function BankApp() {
 
  // Function to add a new user
  const addUser = (user) => {
+    const existUsername = users.find(uname => uname.name === user.name);
+    if (existUsername) {
+      alert("User already exists");
+      return;
+    }
     // Check if user with the same email already exists
     const existingUser = users.find(u => u.email === user.email);
      if (existingUser) {

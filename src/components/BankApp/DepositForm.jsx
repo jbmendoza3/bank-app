@@ -19,12 +19,7 @@ const DepositForm = ({ depositMoney, toggleDepositPopup, users }) => {
       <h2>Deposit</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="user">Select User:</label>
-        <select
-          id="user"
-          value={selectedUser}
-          onChange={(e) => setSelectedUser(e.target.value)}
-          required
-        >
+        <select id="user" value={selectedUser} onChange={(e) => setSelectedUser(e.target.value)} required>
           <option value="">Select User</option>
           {users.map((user, index) => (
             <option key={index} value={user.name}>
@@ -33,13 +28,7 @@ const DepositForm = ({ depositMoney, toggleDepositPopup, users }) => {
           ))}
         </select>
         <label htmlFor="amount">Amount:</label>
-        <input
-          type="number"
-          id="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          required
-        />
+        <input type="number" id="amount" value={amount} onKeyDown={ e => ( e.keyCode === 69 ) && e.preventDefault() } onChange={(e) => setAmount(e.target.value)} required/>
         <button className="deposit-btn" type="submit">Deposit</button>
         <button className="close-btn" onClick={toggleDepositPopup}>Close</button>
       </form>

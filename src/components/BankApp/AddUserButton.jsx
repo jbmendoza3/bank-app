@@ -60,7 +60,7 @@ const AddUserPopup = ({ onAddUser, onClose }) => {
           <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-          <input type="number" placeholder="Balance" value={balance} onChange={(e) => setBalance(parseFloat(e.target.value))} required />
+          <input type="number" placeholder="Balance" value={balance} onKeyDown={ e => ( e.keyCode === 69 ) && e.preventDefault() } onChange={(e) => setBalance(parseFloat(e.target.value))} required />
           <button className="adduser-btn" type="submit">Add User</button>
           <button className="close-btnx" type="button" onClick={handleCancel}>Cancel</button>
         </form>

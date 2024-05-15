@@ -38,7 +38,7 @@ const WithdrawButton = ({ users, onWithdraw, onClose }) => {
           ))}
         </select>
         <label htmlFor="amount">Amount:</label>
-        <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} required></input>
+        <input type="number" id="amount" value={amount} onKeyDown={ e => ( e.keyCode === 69 ) && e.preventDefault() } onChange={(e) => setAmount(e.target.value)} required></input>
         <button className="withdrawbtn" type="submit">Withdraw</button>
         <button className="cancelbtn" type="button" onClick={handleCancel}>Cancel</button>
       </form>

@@ -47,7 +47,7 @@ const SendMoneyForm = ({ users, sendMoney, toggleSendMoneyPopup }) => {
           ))}
         </select>
         <label htmlFor="amount">Amount:</label>
-        <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} required></input>
+        <input type="number" id="amount" value={amount} onKeyDown={ e => ( e.keyCode === 69 ) && e.preventDefault() } onChange={(e) => setAmount(e.target.value)} required></input>
         <button className="sendmoneybtn" type="submit">Send</button>
         <button className="close-btn" onClick={toggleSendMoneyPopup}>Close</button>
       </form>
